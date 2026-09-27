@@ -535,110 +535,77 @@ a:focus-visible,button:focus-visible,summary:focus-visible {
     }
 }
 
-@media(prefers-reduced-motion:reduce) {
-    html {
-        scroll-behavior: auto
-    }
-}
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    white-space: nowrap;
-    border: 0
-}
-
-.capacity-theme {
-    --study: #244d74;
-    --study-accent: #376f9a
-}
-
-.capacity-panel {
-    background: #edf3f8
-}
-
-.capacity-home {
-    background: #e7f0f5;
-    border-top: 1px solid var(--line)
-}
-
-.capacity-home-inner {
-    display: grid;
-    grid-template-columns: minmax(0,1.5fr) minmax(230px,.8fr);
-    gap: 3rem;
-    align-items: center
-}
-
-.capacity-home p:not(.eyebrow) {
-    max-width: 630px;
-    color: #3e5266
-}
-
-.capacity-home a {
-    font-weight: 750
-}
-
-.capacity-home-facts {
-    border-left: 3px solid #3f83a6;
-    padding-left: 1.4rem;
-    display: grid;
-    gap: 1.2rem
-}
-
-.capacity-home-facts div {
-    display: grid;
-    gap: .1rem
-}
-
-.capacity-home-facts strong {
-    font-family: Georgia,serif;
-    font-size: 1.2rem
-}
-
-.capacity-home-facts span {
-    color: #4d6072
-}
-
-.capacity-steps {
-    display: grid;
-    grid-template-columns: repeat(3,minmax(0,1fr));
-    gap: 1rem;
-    margin: 1.7rem 0 2rem
-}
-
-.capacity-steps>div {
-    border-top: 3px solid #3b789e;
-    padding: 1rem .6rem 0 0
-}
-
-.capacity-steps span {
-    color: #316b91;
-    font-weight: 800;
-    font-size: .85rem
-}
-
-.capacity-steps h3 {
-    font-family: Georgia,serif;
-    font-size: 1.35rem;
-    margin: .5rem 0
-}
-
-.capacity-steps p {
-    margin: 0;
-    color: #45596b
-}
-
 @media(max-width: 760px) {
     .capacity-home-inner,.capacity-steps {
         grid-template-columns:1fr
     }
 
     .capacity-home-inner {
+        gap: 1.5rem
+    }
+}
+
+/* CTA section on homepage */
+.cta-section {
+    background: #10243d;
+    color: #eef5f8
+}
+
+.cta-inner {
+    display: grid;
+    grid-template-columns: minmax(0,1.4fr) minmax(230px,.8fr);
+    gap: 2.5rem;
+    align-items: center
+}
+
+.cta-text .eyebrow {
+    color: #80dad3
+}
+
+.cta-text h2 {
+    font-family: Georgia,serif;
+    font-size: clamp(1.7rem,3vw,2.4rem);
+    line-height: 1.2;
+    margin: 0 0 .9rem;
+    color: #ffffff
+}
+
+.cta-text p {
+    color: #c9dbe6;
+    max-width: 640px;
+    margin: 0
+}
+
+.cta-actions {
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+    align-items: flex-start
+}
+
+.cta-button {
+    display: inline-block;
+    background: #80dad3;
+    color: #10243d;
+    text-decoration: none;
+    font-weight: 750;
+    padding: .85rem 1.4rem;
+    border-radius: 3px;
+    transition: background .15s ease
+}
+
+.cta-button:hover {
+    background: #a8ebe4
+}
+
+.cta-link {
+    color: #bdebe4;
+    font-size: .93rem
+}
+
+@media(max-width: 760px) {
+    .cta-inner {
+        grid-template-columns: 1fr;
         gap: 1.5rem
     }
 }
