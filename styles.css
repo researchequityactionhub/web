@@ -545,24 +545,22 @@ a:focus-visible,button:focus-visible,summary:focus-visible {
     }
 }
 
-/* CTA section on homepage */
+/* CTA section with contact form */
 .cta-section {
     background: #10243d;
     color: #eef5f8
 }
 
-.cta-inner {
-    display: grid;
-    grid-template-columns: minmax(0,1.4fr) minmax(230px,.8fr);
-    gap: 2.5rem;
-    align-items: center
+.cta-intro {
+    max-width: 720px;
+    margin-bottom: 2.5rem
 }
 
-.cta-text .eyebrow {
+.cta-intro .eyebrow {
     color: #80dad3
 }
 
-.cta-text h2 {
+.cta-intro h2 {
     font-family: Georgia,serif;
     font-size: clamp(1.7rem,3vw,2.4rem);
     line-height: 1.2;
@@ -570,42 +568,168 @@ a:focus-visible,button:focus-visible,summary:focus-visible {
     color: #ffffff
 }
 
-.cta-text p {
+.cta-intro p {
     color: #c9dbe6;
-    max-width: 640px;
     margin: 0
 }
 
-.cta-actions {
+.contact-form {
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 4px;
+    padding: 2rem;
+    max-width: 780px
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 1.2rem;
+    margin-bottom: 1.2rem
+}
+
+.form-field {
     display: flex;
     flex-direction: column;
-    gap: .9rem;
-    align-items: flex-start
+    gap: .4rem
+}
+
+.form-field label {
+    font-size: .88rem;
+    font-weight: 700;
+    color: #d5e3ec;
+    letter-spacing: .02em
+}
+
+.form-field label .optional {
+    font-weight: 400;
+    color: #8fa8b8;
+    font-size: .82rem
+}
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field select,
+.form-field textarea {
+    font: inherit;
+    font-size: .95rem;
+    padding: .7rem .85rem;
+    border: 1px solid #35516a;
+    border-radius: 3px;
+    background: #ffffff;
+    color: #10233c;
+    width: 100%
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    outline: 3px solid var(--focus);
+    outline-offset: 1px;
+    border-color: #80dad3
+}
+
+.form-field textarea {
+    resize: vertical;
+    min-height: 130px;
+    font-family: inherit
+}
+
+.form-field select {
+    cursor: pointer
+}
+
+.field-error {
+    color: #ffb0a0;
+    font-size: .85rem;
+    margin: 0
+}
+
+.form-consent {
+    margin-bottom: 1.4rem
+}
+
+.checkbox-label {
+    display: flex !important;
+    align-items: flex-start;
+    gap: .6rem;
+    font-weight: 400 !important;
+    font-size: .9rem !important;
+    color: #c9dbe6 !important;
+    cursor: pointer
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-top: .25rem;
+    width: 1rem;
+    height: 1rem;
+    accent-color: #80dad3
+}
+
+.form-status {
+    margin: 0 0 1rem;
+    font-size: .92rem;
+    min-height: 1.4em
+}
+
+.form-status.is-success {
+    color: #9fe6c9
+}
+
+.form-status.is-error {
+    color: #ffb0a0
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.2rem
 }
 
 .cta-button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
     background: #80dad3;
     color: #10243d;
     text-decoration: none;
     font-weight: 750;
+    border: none;
     padding: .85rem 1.4rem;
     border-radius: 3px;
+    cursor: pointer;
+    font: inherit;
+    font-size: 1rem;
     transition: background .15s ease
 }
 
-.cta-button:hover {
+.cta-button:hover:not(:disabled) {
     background: #a8ebe4
 }
 
-.cta-link {
-    color: #bdebe4;
-    font-size: .93rem
+.cta-button:disabled {
+    opacity: .6;
+    cursor: not-allowed
+}
+
+.form-note {
+    margin: 0;
+    font-size: .88rem;
+    color: #a4bcc9
+}
+
+.form-note a {
+    color: #bdebe4
 }
 
 @media(max-width: 760px) {
-    .cta-inner {
-        grid-template-columns: 1fr;
-        gap: 1.5rem
+    .form-row {
+        grid-template-columns: 1fr
+    }
+
+    .contact-form {
+        padding: 1.4rem
     }
 }
+
