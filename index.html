@@ -100,23 +100,92 @@
                 </div>
             </section>
 
-            <!-- ⬇️ CTA SECTION — NEW ⬇️ -->
-            <section class="section cta-section" aria-labelledby="cta-title">
-                <div class="shell cta-inner">
-                    <div class="cta-text">
-                        <p class="eyebrow">Work with me</p>
-                        <h2 id="cta-title">Partner on research, teaching or capacity building.</h2>
-                        <p>I welcome enquiries about collaboration, invited talks, research supervision and consultancy on research equity, inclusion and nursing workforce development.</p>
-                    </div>
-                    <div class="cta-actions">
-                        <a class="cta-button" href="mailto:yetunde.ataiyero@staffs.ac.uk?subject=Enquiry%20from%20website">
-                            Get in touch <span aria-hidden="true">→</span>
-                        </a>
-                        <a class="cta-link" href="/web/fair.html#recommendations">See the recommendations</a>
-                    </div>
+           <!-- ⬇️ CTA SECTION WITH CONTACT FORM — NEW ⬇️ -->
+        <section class="section cta-section" aria-labelledby="cta-title">
+            <div class="shell">
+                <div class="cta-intro">
+                    <p class="eyebrow">Work with me</p>
+                    <h2 id="cta-title">Partner on research, teaching or capacity building.</h2>
+                    <p>I welcome enquiries about collaboration, invited talks, research supervision and consultancy on research equity, inclusion and nursing workforce development.</p>
                 </div>
-            </section>
-            <!-- ⬆️ CTA SECTION — NEW ⬆️ -->
+        
+                <form
+                    class="contact-form"
+                    id="contact-form"
+                    action="https://api.web3forms.com/submit"
+                    method="POST"
+                    novalidate
+                >
+                    <!-- Web3Forms config -->
+                    <input type="hidden" name="access_key" value="YOUR-ACCESS-KEY-HERE">
+                    <input type="hidden" name="subject" value="New enquiry from yetundeataiyero.com">
+                    <input type="hidden" name="from_name" value="Website Contact Form">
+                    <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+        
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="cf-name">Full name <span aria-hidden="true">*</span></label>
+                            <input type="text" id="cf-name" name="name" autocomplete="name" required minlength="2" maxlength="80">
+                            <p class="field-error" id="err-name" hidden>Please enter your full name.</p>
+                        </div>
+        
+                        <div class="form-field">
+                            <label for="cf-org">Organisation <span class="optional">(optional)</span></label>
+                            <input type="text" id="cf-org" name="organisation" autocomplete="organization" maxlength="120">
+                        </div>
+                    </div>
+        
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="cf-email">Email address <span aria-hidden="true">*</span></label>
+                            <input type="email" id="cf-email" name="email" autocomplete="email" required maxlength="120">
+                            <p class="field-error" id="err-email" hidden>Please enter a valid email address.</p>
+                        </div>
+        
+                        <div class="form-field">
+                            <label for="cf-purpose">Purpose of enquiry <span aria-hidden="true">*</span></label>
+                            <select id="cf-purpose" name="purpose" required>
+                                <option value="">Please choose…</option>
+                                <option>Research collaboration</option>
+                                <option>Invited talk or lecture</option>
+                                <option>Research supervision</option>
+                                <option>Consultancy or advisory work</option>
+                                <option>Media or press enquiry</option>
+                                <option>Student or career enquiry</option>
+                                <option>Other</option>
+                            </select>
+                            <p class="field-error" id="err-purpose" hidden>Please choose a purpose.</p>
+                        </div>
+                    </div>
+        
+                    <div class="form-field">
+                        <label for="cf-message">Enquiry details <span aria-hidden="true">*</span></label>
+                        <textarea id="cf-message" name="message" rows="6" required minlength="10" maxlength="2000"></textarea>
+                        <p class="field-error" id="err-message" hidden>Please include a short message (at least 10 characters).</p>
+                    </div>
+        
+                    <div class="form-field form-consent">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="consent" required>
+                            <span>I agree to my details being used to respond to this enquiry. <span aria-hidden="true">*</span></span>
+                        </label>
+                        <p class="field-error" id="err-consent" hidden>Please confirm consent to proceed.</p>
+                    </div>
+        
+                    <!-- Status messages -->
+                    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        
+                    <div class="form-actions">
+                        <button type="submit" class="cta-button" id="submit-btn">
+                            <span class="btn-label">Send enquiry</span>
+                            <span class="btn-spinner" aria-hidden="true" hidden>…</span>
+                        </button>
+                        <p class="form-note">Or email directly: <a href="mailto:yetunde.ataiyero@staffs.ac.uk">yetunde.ataiyero@staffs.ac.uk</a></p>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- ⬆️ CTA SECTION WITH CONTACT FORM — NEW ⬆️ -->
 
         </main>
         <footer class="footer">
