@@ -11,7 +11,6 @@
     font-family: Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
     font-size: 16px
 }
-.capacity-theme { --study: #244d74; --study-accent: #376f9a; }
 
 * {
     box-sizing: border-box
@@ -339,6 +338,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible {
     --study-accent: #a76b25
 }
 
+.capacity-theme {
+    --study: #244d74;
+    --study-accent: #376f9a
+}
+
 .two-col {
     display: grid;
     grid-template-columns: minmax(0,2fr) minmax(230px,1fr);
@@ -544,6 +548,89 @@ a:focus-visible,button:focus-visible,summary:focus-visible {
     .capacity-home-inner {
         gap: 1.5rem
     }
+
+    .capacity-home-inner,
+.capacity-steps {
+    grid-template-columns: 1fr
+}
+.capacity-home-inner {
+    gap: 1.5rem
+    }
+}
+
+.capacity-panel {
+    background: #edf3f8
+}
+
+.capacity-home {
+    background: #e7f0f5;
+    border-top: 1px solid var(--line)
+}
+
+.capacity-home-inner {
+    display: grid;
+    grid-template-columns: minmax(0,1.5fr) minmax(230px,.8fr);
+    gap: 3rem;
+    align-items: center
+}
+
+.capacity-home p:not(.eyebrow) {
+    max-width: 630px;
+    color: #3e5266
+}
+
+.capacity-home a {
+    font-weight: 750
+}
+
+.capacity-home-facts {
+    border-left: 3px solid #3f83a6;
+    padding-left: 1.4rem;
+    display: grid;
+    gap: 1.2rem
+}
+
+.capacity-home-facts div {
+    display: grid;
+    gap: .1rem
+}
+
+.capacity-home-facts strong {
+    font-family: Georgia,serif;
+    font-size: 1.2rem
+}
+
+.capacity-home-facts span {
+    color: #4d6072
+}
+
+.capacity-steps {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 1rem;
+    margin: 1.7rem 0 2rem
+}
+
+.capacity-steps > div {
+    border-top: 3px solid #3b789e;
+    padding: 1rem .6rem 0 0
+}
+
+.capacity-steps span {
+    color: #316b91;
+    font-weight: 800;
+    font-size: .85rem
+}
+
+.capacity-steps h3 {
+    font-family: Georgia,serif;
+    font-size: 1.35rem;
+    margin: .5rem 0
+}
+
+.capacity-steps p {
+    margin: 0;
+    color: #45596b
 }
 
 /* CTA section with contact form */
